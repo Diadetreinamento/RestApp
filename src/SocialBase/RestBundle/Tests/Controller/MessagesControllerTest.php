@@ -19,7 +19,9 @@ class MessagesControllerTest extends WebTestCase
 {
 
     public function getDefaultEnvironment () {
-        return !empty(getenv('SYMFONY_ENV')) ? getenv('SYMFONY_ENV') : 'test';
+
+        $env = getenv('SYMFONY_ENV');
+        return !empty($env) ? $env : 'test';
     }
 
     /**
