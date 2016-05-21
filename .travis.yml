@@ -22,3 +22,6 @@ before_script:
   - php app/console doctrine:migrations:migrate --env=travis --no-interaction
 
 script: phpunit --coverage-text --configuration app/phpunit.travis.xml
+
+notifications:
+  slack: eventoserm:tsqPXc4VaylphpllAKr9Dhti
