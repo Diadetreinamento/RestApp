@@ -148,5 +148,11 @@ class MessagesController extends FOSRestController
 
         return $this->handleView($this->view($id));
     }
+    
+    
+    public function testeAction () {
+        
+        return $this->handleView($this->view(array('message'=>'teste')));    
 
+    }
 }
