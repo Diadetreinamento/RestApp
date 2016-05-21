@@ -1,7 +1,7 @@
 API Rest Example with Symfony, FOS Rest Bundle
 ==========
 
-[![Build Status](https://travis-ci.org/nezkal/socialbase.svg?branch=master)](https://travis-ci.org/nezkal/socialbase)
+[![Build Status](https://travis-ci.org/Diadetreinamento/RestApp.svg?branch=master)](https://travis-ci.org/Diadetreinamento/RestApp)
 
 
 How to install this project

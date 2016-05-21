@@ -7,8 +7,7 @@ php:
   - 7.0
   - hhvm
 env:
-  - SYMFONY_VERSION=2.8.*
-  - SYMFONY_ENV=travis
+  - SYMFONY_VERSION=2.8.* SYMFONY_ENV=travis
 
 services:
   - mysql
