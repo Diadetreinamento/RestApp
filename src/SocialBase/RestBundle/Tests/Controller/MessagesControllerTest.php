@@ -79,7 +79,7 @@ class MessagesControllerTest extends WebTestCase
         $data = json_decode($client->getResponse()->getContent());
 
         $this->assertObjectHasAttribute('id', $data);
-        $client = static::createClient();
+        $client = static::createClient(array('environment' => $this->getDefaultEnvironment()));
 
         $otherMessage = $lipsum->words(3);
 
@@ -119,7 +119,7 @@ class MessagesControllerTest extends WebTestCase
         $data = json_decode($client->getResponse()->getContent());
 
         $this->assertObjectHasAttribute('id', $data);
-        $client = static::createClient();
+        $client = static::createClient(array('environment' => $this->getDefaultEnvironment()));
 
         $crawler = $client->request('DELETE', '/api/messages/' . $data->id . '.json');
 
