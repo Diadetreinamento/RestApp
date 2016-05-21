@@ -23,4 +23,4 @@ before_script:
   - php app/console doctrine:migrations:migrate --no-interaction
   - php app/console doctrine:migrations:migrate --env=test --no-interaction
 
-script: phpunit --coverage-text --configuration app/phpunit.xml.dist
+script: phpunit --coverage-text --configuration app/phpunit.travist.xml

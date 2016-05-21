@@ -17,7 +17,7 @@ swiftmailer:
 
 doctrine:
   dbal:
-    host: mysql
+    host: localhost
     dbname: restapp_test
-    user: root
-    password: 12345
+    user: travis
+    password:

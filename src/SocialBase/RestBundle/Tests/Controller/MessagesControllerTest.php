@@ -18,6 +18,10 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 class MessagesControllerTest extends WebTestCase
 {
 
+    public function getDefaultEnvironment () {
+        return !empty(getenv('SYMFONY_ENV')) ? getenv('SYMFONY_ENV') : 'test';
+    }
+
     /**
      * @param $message
      *
@@ -25,7 +29,7 @@ class MessagesControllerTest extends WebTestCase
      */
     private function addItem($message)
     {
-        $client = static::createClient();
+        $client = static::createClient(array('environment' => $this->getDefaultEnvironment()));
         $crawler = $client->request('POST', '/api/messages.json',
             array(
                 "message" => $message
@@ -136,7 +140,8 @@ class MessagesControllerTest extends WebTestCase
 
     public function testGetMessagesJsonFormat()
     {
-        $client = static::createClient();
+        $client = static::createClient(array('environment' => $this->getDefaultEnvironment()));
+
         $crawler = $client->request('GET', '/api/messages.json');
 
         $this->assertEquals(200, $client->getResponse()->getStatusCode());

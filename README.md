@@ -1,7 +1,5 @@
-Social Base PHP Challenge
+API Rest Example with Symfony, FOS Rest Bundle
 ==========
-
-
 
 [![Build Status](https://travis-ci.org/nezkal/socialbase.svg?branch=master)](https://travis-ci.org/nezkal/socialbase)
 
@@ -10,7 +8,7 @@ How to install this project
     
 > System requirements:
 
-> * PHP 5.3+
+> * PHP 5.4+
 > * Composer
 > * MySQL
 
